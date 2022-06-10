@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Tapestry&display=swap');
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Kanit', sans-serif;
+    background: rgb(222, 237, 250);
+    display: grid;
+    place-items: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+    background-image: linear-gradient(to bottom right, rgb(64, 35, 170),rgb(255, 0, 183));
+}
+
+.button{
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+button:hover
+{
+    transform: scale(1.1);
+}
+.row {
+    cursor: pointer;
+}
+.row .input{
+    margin: 0 10px;
+    height: 110px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    outline: none;
+    border:  none;
+}
+
+.heading{
+    text-align: center;
+    font-size: 2rem;
+    margin: -40px;
+    color: #dcfff7;
+}
+
+.container{
+    
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+    background-color:rgb(255, 255, 255);
+}
+.container button#clear
+{
+    background-color: #ffc7cb;
+    color: #fc4552;
+}
+.container button{
+    background-color: #bde8ff;
+    color: #000;
+}
+.container button#btn-operator{
+    background-color: #ffbaed;
+    color: #ff00f7;
+}
+.container button#equal{
+    background-color: #48ffd4;
+    color: #000;
+}
+.container button#deci{
+    background-color: #dca2ff;
+    color: rgb(0, 0, 0);
+}

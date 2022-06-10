@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatharth - calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="heading">Calculate me !</h1>
+    <div class="container ">
+        <div class="row">
+            <input type="text"  class="input">
+        </div>
+        <div class="row">
+            <button class="button" id="clear">AC</button>
+            <button class="button" id="deci">.</button>
+            <button class="button" >00</button>
+            <button class="button"id="btn-operator">-</button>
+        </div>
+        <div class="row">
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button" id="btn-operator">*</button>
+        </div>
+        <div class="row">
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button" id="btn-operator">/</button>
+        </div>
+        <div class="row">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button" id="btn-operator">+</button>
+        </div>
+        <div class="row">
+            <button class="button" id="btn-operator">(</button>
+            <button class="button">0</button>
+            <button class="button" id="btn-operator">)</button>
+            <button class="button" id="equal">=</button>
+        </div>
+    </div>
+    <!-- <script src="/websites/js project/calculator/script.js"></script> -->
+    <script>
+        let string = "";
+        let button = document.querySelectorAll('.button');
+        Array.from(button).forEach((button) => {
+            button.addEventListener('click', (e) =>{
+                if(e.target.innerHTML == '='){
+                    string = eval(string);
+                    document.querySelector('input').value  = string;
+                }
+                else if(e.target.innerHTML == 'AC'){
+                    string = "";
+                    document.querySelector('input').value  = string;
+                }else{
+                    string = string + e.target.innerHTML;
+                document.querySelector('input').value  = string;
+                }
+            })
+        })
+    </script>
+</body>
+</html>
